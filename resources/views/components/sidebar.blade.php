@@ -20,18 +20,30 @@
 
                 <li class="nav-parent">
                     <a>
-                        <i class="fa fa-gears" aria-hidden="true"></i>
-                        <span>Management</span>
+                        <i class="fa fa-car" aria-hidden="true"></i>
+                        <span>Vehicle</span>
                     </a>
                     <ul class="nav nav-children">
                         <li>
-                            <a>Roles</a>
+                            <a href="{{ route('vehicleCat.index') }}">Jenis</a>
                         </li>
                         <li>
-                            <a href="">Menu</a>
+                            <a href="{{ route('vehicle.index') }}">Vehicle</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-parent">
+                    <a>
+                        <i class="fa fa-history" aria-hidden="true"></i>
+                        <span>Tracking</span>
+                    </a>
+                    <ul class="nav nav-children">
+                        <li>
+                            <a href="{{ route('track.index') }}">Roda</a>
                         </li>
                         <li>
-                            <a href="">Akses</a>
+                            <a href="{{ route('kontainer') }}">Kontainer</a>
                         </li>
                     </ul>
                 </li>

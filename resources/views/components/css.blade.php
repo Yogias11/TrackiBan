@@ -1,5 +1,5 @@
 <!-- Web Fonts  -->
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+{{-- <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css"> --}}
 
 <!-- Vendor CSS -->
 <link rel="stylesheet" href="{{ asset('octopus/vendor/bootstrap/css/bootstrap.css') }}" />

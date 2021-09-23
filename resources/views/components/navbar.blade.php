@@ -15,8 +15,8 @@
                 <img src="{{ asset('') }}octopus/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="{{ asset('') }}octopus/images/!logged-user.jpg" />
             </figure>
             <div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
-                <span class="name">John Doe Junior</span>
-                <span class="role">administrator</span>
+                <span class="name">{{ Auth::user()->name }}</span>
+
             </div>
 
             <i class="fa custom-caret"></i>
@@ -32,7 +32,12 @@
                     <a role="menuitem" tabindex="-1" href="#" data-lock-screen="true"><i class="fa fa-lock"></i> Lock Screen</a>
                 </li>
                 <li>
-                    <a role="menuitem" tabindex="-1" href="pages-signin.html"><i class="fa fa-power-off"></i> Logout</a>
+                    <a role="menuitem" tabindex="-1" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                                  document.getElementById('logout-form').submit();"><i class="fa fa-power-off"></i> {{ __('Logout') }}</a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
                 </li>
             </ul>
         </div>
